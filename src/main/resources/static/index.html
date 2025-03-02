@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sudoku Puzzle</h1>
+		
+		<!-- Wrap Select Grid Size label and dropdown in a single line -->
+        <div class="select-container">
+            <label for="size">Select Grid Size:</label>
+            <select id="size">
+                <option value="4">4x4</option>
+                <option value="9" selected>9x9</option>
+            </select>
+        </div>
+		
+		<div class="select-container">
+			<label for="difficulty">Select Difficulty:</label>
+		    <select id="difficulty">
+		        <option value="VERY_EASY">Very Easy</option>
+		        <option value="EASY">Easy</option>
+		        <option value="MEDIUM" selected>Medium</option>
+		        <option value="HARD">Hard</option>
+		        <option value="VERY_HARD">Very Hard</option>
+		    </select>
+        </div>
+	
+        <div id="sudoku-board" class="sudoku-board"></div>
+		
+		
+		<!-- Wrap buttons in a single line -->
+        <div class="button-container">
+            <button id="generate-btn">Generate</button>
+            <button id="solve-btn">Solve</button>
+            <button id="validate-btn">Validate</button>
+        </div>
+				
+        <p id="message"></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

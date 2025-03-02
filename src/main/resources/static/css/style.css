@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+	cursor: default;
+}
+
+body:focus-within {
+    outline: none;
+}
+
+/* Align header properly */
+h1 {
+    text-align: center;
+}
+
+/* Wrap label and dropdown in a single line */
+.select-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh; /* Reduce height to push up */
+    padding-top: 10px; /* Reduce padding */
+}
+
+
+/* Message Styling */
+#message {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Error Message */
+.error {
+    color: red;
+}
+
+/* Success Message */
+.success {
+    color: green;
+}
+
+.sudoku-board {
+    display: grid;
+    gap: 0;
+    margin: 20px auto;
+    padding: 5px;
+}
+
+/* Sudoku Cells */
+.sudoku-board input {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+	font-size: clamp(12px, 4vw, 24px);
+    border: 1px solid #aaa; /* Cell border */
+    outline: none;
+    background-color: white;
+}
+
+/* Different color for pre-filled cells */
+.sudoku-board input:disabled {
+    background-color: #d3d3d3;
+    font-weight: bold;
+}
+
+/* Borders for 9x9 subgrid */
+.sudoku-board[data-size="9"] input {
+    border: 1px solid #aaa;
+}
+.sudoku-board[data-size="9"] input[data-row="2"], 
+.sudoku-board[data-size="9"] input[data-row="5"] {
+    border-bottom: 3px solid black;
+}
+.sudoku-board[data-size="9"] input[data-col="2"], 
+.sudoku-board[data-size="9"] input[data-col="5"] {
+    border-right: 3px solid black;
+}
+
+/* Borders for 4x4 subgrid */
+.sudoku-board[data-size="4"] input {
+    border: 1px solid #aaa;
+}
+.sudoku-board[data-size="4"] input[data-row="1"] {
+    border-bottom: 3px solid black;
+}
+.sudoku-board[data-size="4"] input[data-col="1"] {
+    border-right: 3px solid black;
+}
+
+/* Highlighted Cells */
+.highlight {
+    background-color: #d3e0ff !important;
+}
+
+/* Style dropdowns to be modern */
+.select-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Style for select dropdown */
+select {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #d6d6d6;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none; /* Remove default focus outline */
+    transition: 0.3s;
+}
+
+/* Remove blue border and add soft shadow on focus */
+select:focus {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure dropdowns and labels stay aligned */
+label {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+
+/* Bigger buttons with spacing */
+button {
+    background: linear-gradient(to right, #b0b0b0, #808080);
+    color: white;
+    padding: 14px 24px; /* Increased padding for bigger buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Increased font size */
+    transition: 0.3s;
+    margin: 5px; /* Added margin for spacing between buttons */
+}
+
+button:hover {
+    background: linear-gradient(to right, #808080, #606060);
+}
+
+/* Ensure button spacing */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Added gap between buttons */
+    margin-top: 15px; /* Increased spacing from the grid */
+}
+
